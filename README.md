@@ -1,3 +1,5 @@
+> **Note**: I forked `QBI-Microscopy/SlideCrop_v2` to try to get it up and running after some interest from a pathology research group at Columbia University reached out to me. The repo would/will need significant refactoring before it should be considered active.
+
 # SlideCrop
 An automated microscope slide cropping application for various types of file formats (primarily .ims extensions). Provides automatic segmentation of separate regions of interest in an image and produces a series of segmented images over the original image's channel, time and z planes. 
 
