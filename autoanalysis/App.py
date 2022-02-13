@@ -229,10 +229,10 @@ class MyFileDropTarget(wx.FileDropTarget):
 class FileSelectPanel(FilesPanel):
     def __init__(self, parent):
         super(FileSelectPanel, self).__init__(parent)
-        self.col_file.SetMinWidth(200)
+       # self.col_file.SetMinWidth(200)
         self.loadController()
-        self.filedrop = MyFileDropTarget(self.m_dataViewListCtrl1)
-        self.m_tcDragdrop.SetDropTarget(self.filedrop)
+        #self.filedrop = MyFileDropTarget(self.m_dataViewListCtrl1)
+        #self.m_tcDragdrop.SetDropTarget(self.filedrop)
         # self.col_file.SetSortable(True)
         # self.col_group.SetSortable(True)
 
@@ -599,9 +599,10 @@ class AppMain(wx.Listbook):
         self.AssignImageList(il)
 
         pages = [(HomePanel(self), "Welcome"),
-                 (Config(self), "Configure"), ]
-      #           (FileSelectPanel(self), "Select Files"),
-      #           (ProcessRunPanel(self), "Run Processes")]
+                 (Config(self), "Configure"),
+                 (FileSelectPanel(self), "Select Files"),
+                 (ProcessRunPanel(self), "Run Processes")
+                ]
         imID = 0
         for page, label in pages:
             self.AddPage(page, label, imageId=imID)
