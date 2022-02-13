@@ -438,7 +438,7 @@ class FilesPanel ( wx.Panel ):
 		
 		self.m_staticText27 = wx.StaticText( self, wx.ID_ANY, u"Filename search text", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText27.Wrap( -1 )
-		self.m_staticText27.SetToolTipString( u"Select files with this search text (eg experiment code).  This is used as the prefix for batch compiled files." )
+	 	self.m_staticText27.SetToolTipString( u"Select files with this search text (eg experiment code).  This is used as the prefix for batch compiled files." )
 		
 		fgSizer4.Add( self.m_staticText27, 0, wx.ALL, 5 )
 		

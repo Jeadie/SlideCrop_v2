@@ -1,5 +1,7 @@
 # import images
 # import logging
+
+
 import csv
 import re
 import time
@@ -8,10 +10,9 @@ from os.path import join, expanduser, isdir, sep
 # maintain this order of matplotlib
 # TkAgg causes Runtime errors in Thread
 
-#matplotlib.use('Agg')
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 import matplotlib as mplt
-print mplt.__version__
+mplt.use('Agg')
 
 #import matplotlib.style
 #mplt.style.use('seaborn-paper')
@@ -598,16 +599,16 @@ class AppMain(wx.Listbook):
         self.AssignImageList(il)
 
         pages = [(HomePanel(self), "Welcome"),
-                 (Config(self), "Configure"),
-                 (FileSelectPanel(self), "Select Files"),
-                 (ProcessRunPanel(self), "Run Processes")]
+                 (Config(self), "Configure"), ]
+      #           (FileSelectPanel(self), "Select Files"),
+      #           (ProcessRunPanel(self), "Run Processes")]
         imID = 0
         for page, label in pages:
             self.AddPage(page, label, imageId=imID)
             # self.AddPage(page, label)
             imID += 1
 
-        self.GetListView().SetColumnWidth(0, wx.LIST_AUTOSIZE)
+     #   self.GetListView().SetColumnWidth(0, wx.LIST_AUTOSIZE)
 
         self.Bind(wx.EVT_LISTBOOK_PAGE_CHANGED, self.OnPageChanged)
         self.Bind(wx.EVT_LISTBOOK_PAGE_CHANGING, self.OnPageChanging)

@@ -3,7 +3,7 @@ An automated microscope slide cropping application for various types of file for
 
 ## Getting Started
 ```
-virtualenv -p [PYTHON_2] .venv
+virtualenv -p [PYTHON_2] .venw
 source .venv/bin/activate
 pip install -r Requirements.txt
 ```
@@ -11,7 +11,7 @@ where `[PYTHON_2]` is the executable for a Python2 interpreter
 
 To start the app
 ```
-python autoanalysis/App.py
+pythonw main.py
 ```
 
 ### Dependencies
