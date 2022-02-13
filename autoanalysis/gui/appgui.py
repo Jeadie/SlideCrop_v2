@@ -213,13 +213,13 @@ class ProcessPanel ( wx.Panel ):
 		
 		bSizer21 = wx.BoxSizer( wx.VERTICAL )
 		
-#		self.m_dataViewListCtrlRunning = wx.dataview.DataViewListCtrl( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.dataview.DV_ROW_LINES|wx.FULL_REPAINT_ON_RESIZE|wx.VSCROLL )
-#		self.m_dataViewListCtrlRunning.SetMinSize( wx.Size( -1,400 ) )
-#		
-#		self.m_dataViewListColumnProcess = self.m_dataViewListCtrlRunning.AppendTextColumn( u"Process" )
-#		self.m_dataViewListColumnStatus = self.m_dataViewListCtrlRunning.AppendProgressColumn( u"Status" )
-#		self.m_dataViewListColumnOutput = self.m_dataViewListCtrlRunning.AppendTextColumn( u"Output" )
-#		bSizer21.Add( self.m_dataViewListCtrlRunning, 0, wx.ALL|wx.EXPAND, 5 )
+		self.m_dataViewListCtrlRunning = wx.dataview.DataViewListCtrl( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize) #, wx.dataview.DV_ROW_LINES|wx.FULL_REPAINT_ON_RESIZE|wx.VSCROLL )
+		self.m_dataViewListCtrlRunning.SetMinSize( wx.Size( -1,400 ) )
+		
+		self.m_dataViewListColumnProcess = self.m_dataViewListCtrlRunning.AppendTextColumn( u"Process" )
+		self.m_dataViewListColumnStatus = self.m_dataViewListCtrlRunning.AppendProgressColumn( u"Status" )
+		self.m_dataViewListColumnOutput = self.m_dataViewListCtrlRunning.AppendTextColumn( u"Output" )
+		bSizer21.Add( self.m_dataViewListCtrlRunning, 0, wx.ALL|wx.EXPAND, 5 )
 		
 		
 		bSizer19.Add( bSizer21, 1, wx.EXPAND, 5 )
@@ -499,13 +499,13 @@ class FilesPanel ( wx.Panel ):
 		
 		bSizer18 = wx.BoxSizer( wx.VERTICAL )
 		
-#		self.m_dataViewListCtrl1 = wx.dataview.DataViewListCtrl( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( -1,-1 ), wx.dataview.DV_MULTIPLE|wx.HSCROLL|wx.VSCROLL )
-#		self.m_dataViewListCtrl1.SetMinSize( wx.Size( -1,300 ) )
+		self.m_dataViewListCtrl1 = wx.dataview.DataViewListCtrl( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( -1,-1 ))# , wx.dataview.DV_MULTIPLE|wx.HSCROLL|wx.VSCROLL )
+		self.m_dataViewListCtrl1.SetMinSize( wx.Size( -1,300 ) )
 		
-#		self.col_selected = self.m_dataViewListCtrl1.AppendToggleColumn( u"Select" )
-#		self.col_group = self.m_dataViewListCtrl1.AppendTextColumn( u"Group" )
-#		self.col_file = self.m_dataViewListCtrl1.AppendTextColumn( u"File" )
-#		bSizer18.Add( self.m_dataViewListCtrl1, 0, wx.ALIGN_TOP|wx.ALL|wx.EXPAND, 5 )
+		self.col_selected = self.m_dataViewListCtrl1.AppendToggleColumn( u"Select" )
+		self.col_group = self.m_dataViewListCtrl1.AppendTextColumn( u"Group" )
+		self.col_file = self.m_dataViewListCtrl1.AppendTextColumn( u"File" )
+		bSizer18.Add( self.m_dataViewListCtrl1, 0, wx.ALIGN_TOP|wx.ALL|wx.EXPAND, 5 )
 		
 		self.m_status = wx.StaticText( self, wx.ID_ANY, u"Select required files then go to Run Processes", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_status.Wrap( -1 )

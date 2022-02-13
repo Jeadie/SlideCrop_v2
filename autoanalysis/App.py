@@ -229,12 +229,12 @@ class MyFileDropTarget(wx.FileDropTarget):
 class FileSelectPanel(FilesPanel):
     def __init__(self, parent):
         super(FileSelectPanel, self).__init__(parent)
-       # self.col_file.SetMinWidth(200)
+        self.col_file.SetMinWidth(200)
         self.loadController()
-        #self.filedrop = MyFileDropTarget(self.m_dataViewListCtrl1)
-        #self.m_tcDragdrop.SetDropTarget(self.filedrop)
-        # self.col_file.SetSortable(True)
-        # self.col_group.SetSortable(True)
+        self.filedrop = MyFileDropTarget(self.m_dataViewListCtrl1)
+        self.m_tcDragdrop.SetDropTarget(self.filedrop)
+        self.col_file.SetSortable(True)
+        self.col_group.SetSortable(True)
 
     def OnColClick(self, event):
         print("header clicked: ", event.GetColumn())
