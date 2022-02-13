@@ -20,7 +20,7 @@ scikit-image==0.13.1
 scipy==1.0.0
 SimpleConfigParser==0.1.0
 six==1.11.0
-urllib3==1.24.2
+urllib3==1.26.5
 wxPython==4.0.0b2
 xlrd==1.1.0
 pyyaml==5.4.1
