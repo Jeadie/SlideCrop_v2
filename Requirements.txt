@@ -5,7 +5,7 @@ decorator==4.2.1
 h5py==2.7.1
 idna==2.6
 lxml==4.1.1
-matplotlib==2.1.2
+matplotlib==2.2
 networkx==2.1
 numpy==1.14.1
 pandas==0.20.2
@@ -14,7 +14,7 @@ pyparsing==2.2.0
 python-dateutil==2.6.1
 pytz==2017.3
 PyWavelets==0.5.2
-pyxnat==0.0.0
+pyxnat==1.4.0
 requests==2.18.4
 scikit-image==0.13.1
 scipy==1.0.0
@@ -23,3 +23,4 @@ six==1.11.0
 urllib3==1.24.2
 wxPython==4.0.0b2
 xlrd==1.1.0
+pyyaml==5.4.1

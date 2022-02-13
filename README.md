@@ -2,6 +2,18 @@
 An automated microscope slide cropping application for various types of file formats (primarily .ims extensions). Provides automatic segmentation of separate regions of interest in an image and produces a series of segmented images over the original image's channel, time and z planes. 
 
 ## Getting Started
+```
+virtualenv -p [PYTHON_2] .venv
+source .venv/bin/activate
+pip install -r Requirements.txt
+```
+where `[PYTHON_2]` is the executable for a Python2 interpreter 
+
+To start the app
+```
+python autoanalysis/App.py
+```
+
 ### Dependencies
 SlideCrop has the following dependencies: 
 * Numpy

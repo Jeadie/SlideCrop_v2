@@ -10,7 +10,7 @@ from os.path import join, dirname, exists, split, expanduser
 import wx
 import yaml
 
-from autoanalysis.db.dbquery import DBI
+from db.dbquery import DBI
 FORMAT = '|%(thread)d |%(filename)s |%(funcName)s |%(lineno)d ||%(message)s||'
 # Required for dist
 freeze_support()

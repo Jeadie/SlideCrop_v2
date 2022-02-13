@@ -5,37 +5,39 @@ import re
 import time
 from glob import iglob
 from os.path import join, expanduser, isdir, sep
-from autoanalysis.db.dbquery import DBI
 # maintain this order of matplotlib
 # TkAgg causes Runtime errors in Thread
-import matplotlib
 
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
+#matplotlib.use('Agg')
+#import matplotlib.pyplot as plt
+import matplotlib as mplt
+print mplt.__version__
 
-plt.style.use('seaborn-paper')
+#import matplotlib.style
+#mplt.style.use('seaborn-paper')
+
 import wx
 import wx.html2
-from os.path import abspath, dirname, commonpath
+from os.path import abspath, dirname
 from os import access,R_OK, mkdir
 from glob import iglob
 import shutil
-from autoanalysis.controller import EVT_RESULT, Controller
-from autoanalysis.gui.appgui import ConfigPanel, FilesPanel, WelcomePanel, ProcessPanel,dlgLogViewer
+from controller import EVT_RESULT, Controller
+from gui.appgui import ConfigPanel, FilesPanel, WelcomePanel, ProcessPanel,dlgLogViewer
+from db.dbquery import DBI
 
 __version__ = '1.0.0'
 
 
 ##### Global functions
 def findResourceDir():
-    allfiles = [y for y in iglob(join('.', '**', "resources"), recursive=True)]
-    files = [f for f in allfiles if not 'build' in f]
-    resource_dir = commonpath(files)
-    if len(resource_dir) > 0:
-        print("Resource directory located to: ", resource_dir)
-    else:
-        resource_dir =join('autoanalysis','resources')
-
+ #   allfiles = [y for y in iglob(join('.', '**', "resources"), recursive=True)]
+ #   files = [f for f in allfiles if not 'build' in f]
+ #   resource_dir = commonpath(files)
+ #   if len(resource_dir) > 0:
+ #       print("Resource directory located to: ", resource_dir)
+ #   else:
+    resource_dir =join('autoanalysis','resources')
     return abspath(resource_dir)
 
 

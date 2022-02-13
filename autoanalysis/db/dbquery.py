@@ -108,22 +108,22 @@ class DBI():
         return data
 
 #############################################################################
-if __name__ == "__main__":
-    configdb = join('..','resources', 'autoconfig_test.db')
-    if access(configdb,R_OK):
-        dbi = DBI(configdb)
-        dbi.getconn()
-        configid='general'
-        config = dbi.getConfig(configid)
-        for k,v in config.items():
-            print(k,"=",v)
-
-        test1 = 'BINWIDTH'
-        print("Getting value for ", test1, " is ", dbi.getConfigByName(configid,test1))
-
-        test2 = 11
-        print("Getting value/s for ", test2, " is ", dbi.getConfigByValue(test2))
-
-    else:
-        raise IOError("cannot access db")
+#if __name__ == "__main__":
+#    configdb = join('..','resources', 'autoconfig_test.db')
+#    if access(configdb,R_OK):
+#        dbi = DBI(configdb)
+#        dbi.getconn()
+#        configid='general'
+#        config = dbi.getConfig(configid)
+#        for k,v in config.items():
+#            print(k,"=",v)
+#
+#        test1 = 'BINWIDTH'
+#        print("Getting value for ", test1, " is ", dbi.getConfigByName(configid,test1))
+#
+#        test2 = 11
+#        print("Getting value/s for ", test2, " is ", dbi.getConfigByValue(test2))
+#
+#    else:
+#        raise IOError("cannot access db")
 
