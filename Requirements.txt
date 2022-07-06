@@ -4,7 +4,7 @@ cycler==0.10.0
 decorator==4.2.1
 h5py==2.7.1
 idna==2.6
-lxml==4.6.5
+lxml==4.9.1
 matplotlib==2.2
 networkx==2.1
 numpy==1.21.0
